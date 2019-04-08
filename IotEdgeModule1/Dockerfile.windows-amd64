@@ -1,0 +1,8 @@
+# escape=`
+FROM microsoft/nanoserver
+ARG binPath
+
+WORKDIR "c:\app"
+COPY $binPath ./
+
+ENTRYPOINT ["IotEdgeModule1.exe"]

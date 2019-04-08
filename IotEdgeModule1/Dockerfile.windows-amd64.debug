@@ -1,0 +1,13 @@
+# escape=`
+
+FROM microsoft/nanoserver
+
+ARG VS_REMOTE_DEBUGGER_PATH
+ARG VS_OUT_DIR
+
+ADD $VS_REMOTE_DEBUGGER_PATH "c:\windows"
+
+WORKDIR "c:\app"
+COPY .\output .
+
+ENTRYPOINT start msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:36000 && IotEdgeModule1.exe
