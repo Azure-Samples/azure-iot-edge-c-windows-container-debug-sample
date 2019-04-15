@@ -151,6 +151,7 @@
   <ItemGroup>
     <None Include=".dockerignore" />
     <None Include=".gitignore" />
+    <None Include="BuildAndRun.cmd" />
     <None Include="Dockerfile.amd64" />
     <None Include="Dockerfile.amd64.debug" />
     <None Include="Dockerfile.windows-amd64" />
@@ -158,7 +159,6 @@
     <None Include="Dockerfile.windows-amd64.debug" />
     <None Include="module.json" />
     <None Include="BuildWindowsBits.cmd" />
-    <None Include="NanoDockerBuild.cmd" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="CMakeLists.txt" />

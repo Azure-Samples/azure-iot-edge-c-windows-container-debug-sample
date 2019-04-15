@@ -128,6 +128,6 @@ goto :EOF
 echo.
 echo Usage:
 echo.
-echo    NanoDockerBuild.cmd [full-path-to-test-binaries]
+echo    BuildAndRun.cmd
 echo.
 goto :EOF
