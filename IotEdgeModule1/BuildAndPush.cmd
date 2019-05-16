@@ -81,7 +81,9 @@ if ERRORLEVEL 1 (
     goto :EOF
 )
 
-iotedgehubdev start -d "..\\AzureIotEdgeApp1.Windows.Amd64\\config\\deployment.windows-amd64.debug.json"
+echo Push image...
+docker tag iotedgemodule1:0.0.1-windows-amd64.debug [Your Registry Server]/iotedgemodule1:0.0.1-windows-amd64.debug
+docker push [Your Registry Server]/iotedgemodule1:0.0.1-windows-amd64.debug
 
 :: cleanup staged files
 if exist %LOCAL_BIN_STAGING_DIR% (
@@ -128,6 +130,6 @@ goto :EOF
 echo.
 echo Usage:
 echo.
-echo    BuildAndRun.cmd
+echo    BuildAndPush.cmd
 echo.
 goto :EOF

@@ -10,4 +10,4 @@ ADD $VS_REMOTE_DEBUGGER_PATH "c:\windows"
 WORKDIR "c:\app"
 COPY .\output .
 
-ENTRYPOINT start msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:36000 && IotEdgeModule1.exe
+ENTRYPOINT ["IotEdgeModule1.exe"]

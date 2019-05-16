@@ -151,7 +151,7 @@
   <ItemGroup>
     <None Include=".dockerignore" />
     <None Include=".gitignore" />
-    <None Include="BuildAndRun.cmd" />
+    <None Include="BuildAndPush.cmd" />
     <None Include="Dockerfile.amd64" />
     <None Include="Dockerfile.amd64.debug" />
     <None Include="Dockerfile.windows-amd64" />
