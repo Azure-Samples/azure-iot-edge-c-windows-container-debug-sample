@@ -82,8 +82,8 @@ if ERRORLEVEL 1 (
 )
 
 echo Push image...
-docker tag iotedgemodule1:0.0.1-windows-amd64.debug [Your Registry Server]/iotedgemodule1:0.0.1-windows-amd64.debug
-docker push [Your Registry Server]/iotedgemodule1:0.0.1-windows-amd64.debug
+docker tag %DockerImageName% [Your Registry Server]/%DockerImageName%
+docker push [Your Registry Server]/%DockerImageName%
 
 :: cleanup staged files
 if exist %LOCAL_BIN_STAGING_DIR% (
